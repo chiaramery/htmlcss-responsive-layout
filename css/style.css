@@ -9,13 +9,20 @@ html{
     font-family: 'PT Sans', sans-serif;
     font-size: 100%;
 }
-/* img{
+img{
     width: 100%;
-} */
+}
+section{
+    padding-top: 3em;
+    padding-bottom: 3em;
+}
 /* Variables */
 :root{
     /* Spaces */
     --mb: 1em; 
+
+    --pt: 1.5em;
+    --pb: 1.5em;
     /* Colors */
     --blue: rgb(43 140 248);
     --light-blue: rgb(185 223 253);
@@ -53,8 +60,9 @@ header .container .logo{
     padding-top: .5rem;
 }
 /* MAIN */
+/* First section */
 .card{
-    margin-top: 6rem;
+    margin-top: 3rem;
 }
 .cards{
     padding: .5em;
@@ -66,6 +74,18 @@ header .container .logo{
 .cards .text-wrapper,
 .cards h1{
     margin-bottom: var(--mb);
+}
+/* Second section */
+#planning{
+    background-color: var(--violet);
+}
+.hybrid,
+.hybrid p{
+    padding-bottom: var(--pb);
+}
+.hybrid h2{
+    padding-top: var(--pt);
+    padding-bottom: var(--pb);
 }
 /* RESPONSIVE */
 /* Tablet: 768px */
@@ -84,7 +104,7 @@ header .container .logo{
 }
 /* Desktop: 992px */
 @media screen and (min-width: 992px) {
-
+    /* LAYOUT */
     .container{
         width: 80%;
         margin: 0 auto;
@@ -106,4 +126,9 @@ header .container .logo{
         margin-left: 1em;
     }
 
+    /* Second section */
+    .row{
+        display: flex;
+        align-items: flex-end;
+    }
 }
