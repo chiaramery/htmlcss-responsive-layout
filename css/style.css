@@ -1,0 +1,50 @@
+/* RESET */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* COMMON */
+html{
+    font-family: 'PT Sans', sans-serif;
+    font-size: 100%;
+}
+/* img{
+    width: 100%;
+} */
+/* Variables */
+:root{
+
+    /* Colors */
+    --blue: rgb(43 140 248);
+    --light-blue: rgb(185 223 253);
+    --violet: rgb(152 150 224);
+    --light-black: rgb(51 51 51);
+    --yellow: rgb(251 191 101);
+}
+/* HEADER */
+header{
+    background-color: var(--blue);
+    color: white;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+    padding: 0 1rem;
+}
+.container{
+    width: 100%;
+    padding: 0 1rem;
+}
+header .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header .hamburger-menu{
+    font-size: 1.5rem;
+}
+header .container .logo{
+    padding-top: .5rem;
+}
