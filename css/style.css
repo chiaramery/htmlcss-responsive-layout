@@ -14,7 +14,8 @@ html{
 } */
 /* Variables */
 :root{
-
+    /* Spaces */
+    --mb: 1em; 
     /* Colors */
     --blue: rgb(43 140 248);
     --light-blue: rgb(185 223 253);
@@ -45,6 +46,64 @@ header .container{
 header .hamburger-menu{
     font-size: 1.5rem;
 }
+header .menu{
+    display: none;
+}
 header .container .logo{
     padding-top: .5rem;
+}
+/* MAIN */
+.card{
+    margin-top: 6rem;
+}
+.cards{
+    padding: .5em;
+    border-radius: 20px;
+    border: 1px solid black;
+    margin-bottom: var(--mb);
+    background-color: var(--light-blue);
+}
+.cards .text-wrapper,
+.cards h1{
+    margin-bottom: var(--mb);
+}
+/* RESPONSIVE */
+/* Tablet: 768px */
+@media screen and (min-width: 768px) {
+    .card{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .cards{
+        width: calc(100% / 3 - (2rem * 2 / 3));
+    }
+    .cards:first-child{
+        width: calc(100% / 3 * 2 - (2rem / 3));
+    }
+}
+/* Desktop: 992px */
+@media screen and (min-width: 992px) {
+
+    .container{
+        width: 80%;
+        margin: 0 auto;
+        max-width: 1000px;
+    }
+
+    /* HEADER */
+    header .hamburger-menu{
+        display: none;
+    }
+    header .menu{
+        display: block;
+    }
+    header ul{
+        display: flex;
+        list-style-type: none;
+    }
+    header li{
+        margin-left: 1em;
+    }
+
 }
