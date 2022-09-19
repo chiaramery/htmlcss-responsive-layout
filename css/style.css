@@ -13,8 +13,8 @@ img{
     width: 100%;
 }
 section{
-    padding-top: 3em;
-    padding-bottom: 3em;
+    padding-top: 5em;
+    padding-bottom: 5em;
 }
 /* Variables */
 :root{
@@ -24,6 +24,7 @@ section{
 
     --pt: 1.5em;
     --pb: 1.5em;
+    --ppb: 2.5em;
     /* Colors */
     --blue: rgb(43 140 248);
     --light-blue: rgb(185 223 253);
@@ -60,6 +61,7 @@ header .menu{
 header .container .logo{
     padding-top: .5rem;
 }
+
 /* MAIN */
 /* First section */
 .card{
@@ -146,6 +148,20 @@ header .container .logo{
     padding-bottom: var(--pb);
 }
 
+/* FOOTER */
+footer{
+    width: 100%;
+    background-color: var(--light-black);
+}
+#footer{
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    color: white;
+}
+#footer p{
+    padding-bottom: var(--ppb)
+}
 
 
 
@@ -203,9 +219,15 @@ header .container .logo{
     .text-free{
     align-items: center;
     max-width: 650px;
+    }
+
+    /* FOOTER */
+    #footer{
+        width: 60%;
+    }
 }
 
-}
+
 
 
 /* Desktop: 992px */
@@ -253,5 +275,10 @@ header .container .logo{
     .text-free{
     align-items: center;
     max-width: 850px;
+    }
+
+     /* FOOTER */
+     #footer{
+        width: 50%;
     }
 }
