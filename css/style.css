@@ -87,9 +87,31 @@ header .container .logo{
     padding-top: var(--pt);
     padding-bottom: var(--pb);
 }
+/* Third section */
+.description{
+    text-align: center;
+    padding-bottom: var(--pb);
+}
+.introduction{
+    color: white;
+    margin-bottom: var(--mb);
+    background-color: var(--violet);
+    border-radius: 20px;
+    padding: 1em;
+}
+.introduction p{
+    padding-bottom: 1em;
+}
+
+
+
+
+
+
 /* RESPONSIVE */
 /* Tablet: 768px */
 @media screen and (min-width: 768px) {
+    /* First section */
     .card{
         display: flex;
         flex-wrap: wrap;
@@ -100,6 +122,11 @@ header .container .logo{
     }
     .cards:first-child{
         width: calc(100% / 3 * 2 - (2rem / 3));
+    }
+
+    /* Third section */
+    .introduction{
+        display: flex;
     }
 }
 /* Desktop: 992px */
