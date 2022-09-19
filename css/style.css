@@ -20,6 +20,7 @@ section{
 :root{
     /* Spaces */
     --mb: 1em; 
+    --mmb: 1.5em;
 
     --pt: 1.5em;
     --pb: 1.5em;
@@ -103,7 +104,20 @@ header .container .logo{
     padding-bottom: 1em;
 }
 
-
+/* Fourth section */
+#benefits{
+    background-color: var(--violet);
+}
+#benefits h2{
+    text-align: center;
+    margin-bottom: var(--mb);
+}
+.card-benefits{
+    background-color: white;
+    border-radius: 20px;
+    margin-bottom: var(--mmb);
+    padding: 1em;
+}
 
 
 
@@ -128,6 +142,18 @@ header .container .logo{
     .introduction{
         display: flex;
     }
+
+    /* Fourth section */
+    .row-benefits{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .card-benefits:nth-child(1n+1){
+        width: calc(100% / 2 - 1em);
+    }
+
 }
 /* Desktop: 992px */
 @media screen and (min-width: 992px) {
@@ -158,4 +184,16 @@ header .container .logo{
         display: flex;
         align-items: flex-end;
     }
+
+    /* Fourth section */
+    .row-benefits{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .card-benefits:nth-child(1n+1){
+        width: calc(100% / 3 - 1em);
+    }
+    
 }
