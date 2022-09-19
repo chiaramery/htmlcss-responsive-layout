@@ -22,8 +22,6 @@ section{
     display: inline-block;
     margin-left: 50%;
     transform: translate(-50%);
-    /* DEBUG */
-    /* background-color: lightcoral; */
 }
 a{
     text-decoration: none;
@@ -323,15 +321,9 @@ footer{
     }
     .left{
         width: 58%;
-
-        /* DEBUG */
-        background-color:lightgreen;
     }
     .right{
         width: 30%;
-
-         /* DEBUG */
-         background-color: lightcoral;
     }
 
     /* Sixth section */
