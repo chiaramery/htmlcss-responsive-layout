@@ -119,6 +119,12 @@ header .container .logo{
     padding: 1em;
 }
 
+/* Fifth section */
+.col-about-us h1,
+.col-about-us p{
+    margin-bottom: var(--mmb);
+}
+
 
 
 
@@ -154,6 +160,25 @@ header .container .logo{
         width: calc(100% / 2 - 1em);
     }
 
+    /* Fifth section */
+    .row-about-us{
+        width: 90%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+    }
+    .left{
+        width: 58%;
+
+        /* DEBUG */
+        background-color:lightgreen;
+    }
+    .right{
+        width: 30%;
+
+         /* DEBUG */
+         background-color: lightcoral;
+    }
 }
 /* Desktop: 992px */
 @media screen and (min-width: 992px) {
