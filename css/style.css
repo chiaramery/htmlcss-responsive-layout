@@ -71,6 +71,12 @@ header .menu{
 header .container .logo{
     padding-top: .5rem;
 }
+.get-started-button a{
+    background-color: white;
+    color: black;
+    padding: .5em;
+    border-radius: 30px;
+}
 
 /* MAIN */
 /* About section */
@@ -114,8 +120,12 @@ header .container .logo{
 .image-wrapper{
     margin: 0 auto;
     width: 60%;
-    margin-top: .5em;
-    margin-bottom: -3.7px;
+    padding-top: 1em;
+}
+.image-wrapper img{
+    position: relative;
+    bottom: -.3em;
+    left: 0;
 }
 /* Planning section */
 #planning{
@@ -269,6 +279,9 @@ header .container .logo{
 .text-free h2,
 .text-free h1{
     padding-bottom: var(--pb);
+}
+.text-free p > span{
+    text-decoration: underline;
 }
 .right img{
     width: 35vw;
