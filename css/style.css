@@ -303,7 +303,9 @@ footer{
 #footer p{
     padding-bottom: var(--ppb)
 }
-
+#footer a{
+    color: var(--violet);
+}
 
 
 /* RESPONSIVE */
@@ -410,6 +412,10 @@ header li{
 .row{
     display: flex;
     align-items: flex-end;
+}
+/* Testimonials section */
+.text-introduction{
+    padding: 3em;
 }
 /* Benefits section */
 .row-benefits{
