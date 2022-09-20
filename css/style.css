@@ -20,13 +20,8 @@ section{
     text-align: center;
     border-radius: 30px;
     display: inline-block;
-    margin-left: 50%;
-    transform: translate(-50%);
 }
-a{
-    text-decoration: none;
-    color: white;
-}
+
 /* Variables */
 :root{
     /* Spaces */
@@ -54,6 +49,10 @@ header{
     z-index: 999;
     padding: 0 1rem;
 }
+header a{
+    text-decoration: none;
+    color: white;
+}
 .container{
     width: 100%;
     padding: 0 1rem;
@@ -74,7 +73,11 @@ header .container .logo{
 }
 
 /* MAIN */
-/* First section */
+/* About section */
+#about a{
+    text-decoration: none;
+    color: white;
+}
 .card{
     margin-top: 1rem;
 }
@@ -105,13 +108,15 @@ header .container .logo{
 .blue{
     padding: .5em 3em .5em 3em; 
     background-color: var(--blue);
+    margin-left: 50%;
+    transform: translate(-50%);
 }
 .image-wrapper{
     margin: 0 auto;
     width: 60%;
     padding-bottom: 0;
 }
-/* Second section */
+/* Planning section */
 #planning{
     background-color: var(--violet);
 }
@@ -139,6 +144,8 @@ header .container .logo{
 }
 .violet{
     background-color: var(--violet);
+    margin-left: 50%;
+    transform: translate(-50%);
 }
 .arrow{
     width: 40px;
@@ -147,7 +154,7 @@ header .container .logo{
     text-align: center;
     border-radius: 50%;
 }
-/* Third section */
+/* Testimonials section */
 .description{
     text-align: center;
     padding-bottom: var(--pb);
@@ -167,15 +174,21 @@ header .container .logo{
     border-radius: 20px;
     padding: 1em;
 }
-
+.introduction img{
+    width: 30vw;
+    height: 30vw;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
 .introduction p{
-
     text-align: center;
     padding-top: 1em;
     padding-bottom: 1em;
 }
 
-/* Fourth section */
+/* Benefits section */
 #benefits{
     background-color: var(--violet);
 }
@@ -203,12 +216,13 @@ header .container .logo{
     color: var(--violet);
 }
 .card-benefits .button.violet{
+    letter-spacing: .2em;
     margin-left: 3.5em;
     margin-top: 1.5em;
     color: white;
     padding: .5em 2.5em .5em 2.5em;
 }
-/* Fifth section */
+/* About Us section */
 .col-about-us h1,
 .col-about-us p{
     margin-bottom: var(--mmb);
@@ -225,16 +239,24 @@ header .container .logo{
     color: white;
     margin-top: 1.5em;
     padding: .5em;
+    margin-left: 50%;
+    transform: translate(-50%);
 }
-/* Sixth section */
+/* Get Started section */
 #get-started{
     background-color: var(--violet);
+}
+#get-started a{
+    text-decoration: none;
+    color: white;
 }
 .free{
     width: 75%;
     margin: 0 auto;
 }
 .text-free{
+    display: flex;
+    flex-direction: column;
     color: white;
     text-align: center;
 } 
@@ -242,19 +264,29 @@ header .container .logo{
     font-size: 3.5em;
     color: var(--yellow);
 }
-.text-free p,
+.text-free span,
 .text-free h2,
 .text-free h1{
     padding-bottom: var(--pb);
 }
-.text-free p:last-child{
-    padding-top: 2em;
+.right img{
+    width: 35vw;
+    height: 35vw;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    object-fit: cover;
+    border-radius: 50%;   
 }
-.white a{
-    color: var(--violet);
+#get-started a{
+    color: black;
 }
+
 .white{
-    padding: 1em;
+    display: inline-block;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    padding: .5em;
+    color: var(--violet);
     background-color: white;
 }
 /* FOOTER */
@@ -277,65 +309,74 @@ footer{
 /* RESPONSIVE */
 /* Tablet: 768px */
 @media screen and (min-width: 768px) {
-    /* First section */
-    .card{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-    }
-    .cards{
-        width: calc(100% / 3 - (2rem * 2 / 3));
-    }
-    .cards:first-child{
-        width: calc(100% / 3 * 2 - (2rem / 3));
-    }
-    .text-wrapper{
-        font-size: 1.2em;
-    }
-    /* Third section */
-    .introduction{
-        display: flex;
-    }
-    .introduction img{
-        width: 20%;
-    }
-    .text-introduction{
-        display: flex;
-        flex-direction: column;
-    }
+/* About section */
+.card{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.cards{
+    width: calc(100% / 3 - (2rem * 2 / 3));
+}
+.cards:first-child{
+    width: calc(100% / 3 * 2 - (2rem / 3));
+}
+.text-wrapper{
+    font-size: 1.2em;
+}
+/* Testimonials section */
+.introduction{
+    display: flex;
+}
+.introduction img{
+    width: 20%;
+}
+.text-introduction{
+    display: flex;
+    flex-direction: column;
+}
+.introduction img{
+    width: 20vw;
+    height: 20vw;
+    object-fit: cover;
+    border-radius: 50%;   
+    margin-left: 15%;
+}
+/* Benefits section */
+.row-benefits{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
 
-    /* Fourth section */
-    .row-benefits{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-    }
+.card-benefits:nth-child(1n+1){
+    width: calc(100% / 2 - 1em);
+}
+/* About Us section */
+.row-about-us{
+    display: flex;
+    justify-content: space-between;
+}
+.left{
+    width: 58%;
+}
+.right{
+    width: 30%;
+}
 
-    .card-benefits:nth-child(1n+1){
-        width: calc(100% / 2 - 1em);
-    }
-    /* Fifth section */
-    .row-about-us{
-        display: flex;
-        justify-content: space-between;
-    }
-    .left{
-        width: 58%;
-    }
-    .right{
-        width: 30%;
-    }
-
-    /* Sixth section */
-    .text-free{
+/* Get Started section */
+.text-free{
     align-items: center;
     max-width: 650px;
-    }
-
-    /* FOOTER */
-    #footer{
-        width: 60%;
-    }
+}
+.right img{
+    width: 20vw;
+    height: 20vw;
+}
+/* FOOTER */
+#footer{
+    width: 60%;
+}
 }
 
 
@@ -343,53 +384,52 @@ footer{
 
 /* Desktop: 992px */
 @media screen and (min-width: 992px) {
-    /* LAYOUT */
-    .container{
-        width: 80%;
-        margin: 0 auto;
-        max-width: 1000px;
-    }
+/* LAYOUT */
+.container{
+    width: 80%;
+    margin: 0 auto;
+    max-width: 1000px;
+}
 
-    /* HEADER */
-    header .hamburger-menu{
-        display: none;
-    }
-    header .menu{
-        display: block;
-    }
-    header ul{
-        display: flex;
-        list-style-type: none;
-    }
-    header li{
-        margin-left: 1em;
-    }
+/* HEADER */
+header .hamburger-menu{
+    display: none;
+}
+header .menu{
+    display: block;
+}
+header ul{
+    display: flex;
+    list-style-type: none;
+}
+header li{
+    margin-left: 1em;
+}
 
-    /* Second section */
-    .row{
-        display: flex;
-        align-items: flex-end;
-    }
+/* Planning section */
+.row{
+    display: flex;
+    align-items: flex-end;
+}
+/* Benefits section */
+.row-benefits{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
 
-    /* Fourth section */
-    .row-benefits{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-    }
-
-    .card-benefits:nth-child(1n+1){
-        width: calc(100% / 3 - 1em);
-    }
+.card-benefits:nth-child(1n+1){
+    width: calc(100% / 3 - 1em);
+}
     
-    /* Sixth section */
-    .text-free{
-    align-items: center;
-    max-width: 850px;
-    }
+/* Get Started section */
+.text-free{
+align-items: center;
+max-width: 850px;
+}
+/* FOOTER */
+#footer{
+    width: 50%;
+}
 
-     /* FOOTER */
-     #footer{
-        width: 50%;
-    }
 }
